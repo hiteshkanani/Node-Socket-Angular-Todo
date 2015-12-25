@@ -1,0 +1,1 @@
+hitsApp = angular.module('hitsApp', ['ngResource', 'ngRoute']);
