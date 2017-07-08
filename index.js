@@ -26,6 +26,10 @@ io.on('connection', function (socket) {
 	require('./routes/routes.js')(app, socket);  
 });
 
+app.get('*', function(req, res) {
+		res.sendFile(path.resolve('views/index.html'));
+	});
+
 server.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
